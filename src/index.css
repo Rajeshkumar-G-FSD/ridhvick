@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+
+  --color-primary: #003f7c;
+  --color-primary-light: #0056a6;
+  --color-secondary: #755b00;
+  --color-secondary-gold: #f2c027;
+  --color-background-cool: #f9f9ff;
+  --color-surface-low: #f2f3fb;
+  --color-surface-card: #ededf5;
+  --color-text-dark: #191c21;
+  --color-text-muted: #424751;
+}
+
+@layer utilities {
+  .curve-mask {
+    clip-path: ellipse(150% 100% at 50% 0%);
+  }
+  .clip-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+  .clip-slant-reverse {
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+  }
+  .luxury-shadow {
+    box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+  }
+  .luxury-shadow-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .luxury-shadow-hover:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0px 12px 30px rgba(15, 23, 42, 0.1);
+  }
+}
